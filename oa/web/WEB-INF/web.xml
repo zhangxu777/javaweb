@@ -49,4 +49,13 @@
         <url-pattern>/queryProvince</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>QP</servlet-name>
+        <servlet-class>com.xxxx.oa.web.controller.QPServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QP</servlet-name>
+        <url-pattern>/queryjson</url-pattern>
+    </servlet-mapping>
+
 </web-app>
