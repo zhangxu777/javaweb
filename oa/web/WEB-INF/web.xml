@@ -42,7 +42,7 @@
 
     <servlet>
         <servlet-name>QueryProvince</servlet-name>
-        <servlet-class>com.xxxx.oa.web.controller.QueryProvinceServlet</servlet-class>
+        <servlet-class>com.xxxx.oa.web.controller.QPServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>QueryProvince</servlet-name>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/level-ajax-query/level-ajax-query.iml" filepath="$PROJECT_DIR$/level-ajax-query/level-ajax-query.iml" />
       <module fileurl="file://$PROJECT_DIR$/oa/oa.iml" filepath="$PROJECT_DIR$/oa/oa.iml" />
     </modules>
   </component>

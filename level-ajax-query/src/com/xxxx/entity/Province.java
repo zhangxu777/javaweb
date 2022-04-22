@@ -1,16 +1,16 @@
-package com.xxxx.oa.web.controller;
+package com.xxxx.entity;
 
 public class Province {
-    private String id;
+    private Integer id;
     private String name;
     private String jiancheng;
     private String shenghui;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

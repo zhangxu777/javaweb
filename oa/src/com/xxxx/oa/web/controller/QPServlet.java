@@ -26,23 +26,28 @@ public class QPServlet extends HttpServlet {
         ResultSet rs =null;
         String proid = request.getParameter("proid");
         String json = "{}";
+        Province province = new Province();
 
 
 
         try {
-            Province province = new Province();
+
             conn = DBUtil.getConnection();
             String sql = "select id, name, jiancheng, shenghui from province where id = ?";
-            ps.setString(1, proid);
+
+
+
             ps = conn.prepareStatement(sql);
+            ps.setString(1, proid);
             rs = ps.executeQuery();
             if (rs.next()){
-                province.setId(rs.getInt("id"));
+                province.setId(rs.getString("id"));
                 province.setName(rs.getString("name"));
                 province.setJiancheng(rs.getString("jiancheng"));
                 province.setShenghui(rs.getString("shenghui"));
                 ObjectMapper om = new ObjectMapper();
                 json = om.writeValueAsString(province);
+
             }
 
             System.out.println(json);
@@ -57,6 +62,7 @@ public class QPServlet extends HttpServlet {
                 e.printStackTrace();
             }
         }
+
 
         response.setContentType("application/json;charset=utf-8");
         PrintWriter out = response.getWriter();

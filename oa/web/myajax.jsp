@@ -6,6 +6,7 @@
         function  doSearch() {
             //1.创建异步对象
             var xmlHttp = new XMLHttpRequest();
+
             //2.绑定事件
             xmlHttp.onreadystatechange = function() {
                 if( xmlHttp.readyState == 4 && xmlHttp.status == 200){
@@ -39,31 +40,32 @@
             document.getElementById("proname").value = json.name;
             document.getElementById("projiancheng").value=json.jiancheng;
             document.getElementById("proshenghui").value= json.shenghui;
+
         }
 
     </script>
 </head>
 <body>
-    <p>ajax请求使用json格式的数据</p>
-    <table>
-        <tr>
-            <td>省份编号：</td>
-            <td><input type="text" id="proid">
-                <input type="button" value="搜索" onclick="doSearch()">
-            </td>
-        </tr>
-        <tr>
-            <td>省份名称：</td>
-            <td><input type="text" id="proname"></td>
-        </tr>
-        <tr>
-            <td>省份简称：</td>
-            <td><input type="text" id="projiancheng"></td>
-        </tr>
-        <tr>
-            <td>省会名称：</td>
-            <td><input type="text" id="proshenghui"></td>
-        </tr>
-    </table>
+<p>ajax请求使用json格式的数据</p>
+<table>
+    <tr>
+        <td>省份编号：</td>
+        <td><input type="text" id="proid">
+            <input type="button" value="搜索" onclick="doSearch()">
+        </td>
+    </tr>
+    <tr>
+        <td>省份名称：</td>
+        <td><input type="text" id="proname"></td>
+    </tr>
+    <tr>
+        <td>省份简称：</td>
+        <td><input type="text" id="projiancheng"></td>
+    </tr>
+    <tr>
+        <td>省会名称：</td>
+        <td><input type="text" id="proshenghui"></td>
+    </tr>
+</table>
 </body>
 </html>
